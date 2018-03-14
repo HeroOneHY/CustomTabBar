@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF5730CE20590C2800D977A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730CD20590C2800D977A8 /* AppDelegate.m */; };
 		EF5730D120590C2800D977A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730D020590C2800D977A8 /* ViewController.m */; };
-		EF5730D420590C2800D977A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5730D220590C2800D977A8 /* Main.storyboard */; };
 		EF5730D620590C2800D977A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5730D520590C2800D977A8 /* Assets.xcassets */; };
 		EF5730D920590C2800D977A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5730D720590C2800D977A8 /* LaunchScreen.storyboard */; };
 		EF5730DC20590C2800D977A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730DB20590C2800D977A8 /* main.m */; };
@@ -21,7 +20,6 @@
 		EF5730CD20590C2800D977A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EF5730CF20590C2800D977A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EF5730D020590C2800D977A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EF5730D320590C2800D977A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF5730D520590C2800D977A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF5730D820590C2800D977A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5730DA20590C2800D977A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				EF5730CD20590C2800D977A8 /* AppDelegate.m */,
 				EF5730CF20590C2800D977A8 /* ViewController.h */,
 				EF5730D020590C2800D977A8 /* ViewController.m */,
-				EF5730D220590C2800D977A8 /* Main.storyboard */,
 				EF5730D520590C2800D977A8 /* Assets.xcassets */,
 				EF5730D720590C2800D977A8 /* LaunchScreen.storyboard */,
 				EF5730DA20590C2800D977A8 /* Info.plist */,
@@ -131,7 +128,6 @@
 			files = (
 				EF5730D920590C2800D977A8 /* LaunchScreen.storyboard in Resources */,
 				EF5730D620590C2800D977A8 /* Assets.xcassets in Resources */,
-				EF5730D420590C2800D977A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EF5730D220590C2800D977A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF5730D320590C2800D977A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF5730D720590C2800D977A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,6 +269,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SRDD5RQ9SK;
 				INFOPLIST_FILE = customtabbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huajiao.camera.customtabbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +284,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SRDD5RQ9SK;
 				INFOPLIST_FILE = customtabbar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huajiao.camera.customtabbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
