@@ -5,21 +5,6 @@
 //  Created by JM on 2017/12/27.
 //  Copyright © 2017年 JM. All rights reserved.
 //
-/*
- .----------------. .----------------.
- | .--------------. | .--------------. |
- | |     _____    | | | ____    ____ | |
- | |    |_   _|   | | ||_   \  /   _|| |
- | |      | |     | | |  |   \/   |  | |
- | |   _  | |     | | |  | |\  /| |  | |
- | |  | |_' |     | | | _| |_\/_| |_ | |
- | |  `.___.'     | | ||_____||_____|| |
- | |              | | |              | |
- | '--------------' | '--------------' |
- '----------------' '----------------'
- github: https://github.com/JunAILiang
- blog: https://www.ljmvip.cn
- */
 
 #import "JMTabBar.h"
 #import "JMTabBarButton.h"
@@ -99,7 +84,7 @@
             [self topLineIsClearColor:NO];
         }
         
-        JMLog(@"%f",self.height);
+        QHLog(@"%f",self.height);
         
     }
     return self;
@@ -107,7 +92,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-
+   
+    
     NSMutableArray *tempArr = [NSMutableArray array];
     for (UIView *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
@@ -131,7 +117,7 @@
 
     CGFloat viewW = self.width / tempArr.count;
     CGFloat viewH = 49;
-    CGFloat viewY = 0;
+    CGFloat viewY = (self.bounds.size.height-viewH)/2;
     for (int i = 0; i < tempArr.count; i++) {
         CGFloat viewX = i * viewW;
         UIView *view = tempArr[i];

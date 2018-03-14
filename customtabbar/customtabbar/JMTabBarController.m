@@ -18,7 +18,8 @@
 
 - (instancetype)initWithTabBarControllers:(NSArray *)controllers NorImageArr:(NSArray *)norImageArr SelImageArr:(NSArray *)selImageArr TitleArr:(NSArray *)titleArr Config:(JMConfig *)config{
     self.viewControllers = controllers;
-    self.JM_TabBar = [[JMTabBar alloc] initWithFrame:self.tabBar.frame norImageArr:norImageArr SelImageArr:selImageArr TitleArr:titleArr Config:config];
+    CGRect rect = self.tabBar.frame;
+    self.JM_TabBar = [[JMTabBar alloc] initWithFrame:rect norImageArr:norImageArr SelImageArr:selImageArr TitleArr:titleArr Config:config];
     self.JM_TabBar.myDelegate = self;
     
     
@@ -32,7 +33,18 @@
     
     return self;
 }
-
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if ([JMConfig config].tabBarHeight) {
+        CGFloat  width =  [UIScreen mainScreen].bounds.size.width;
+        CGFloat height =   [JMConfig config].tabBarHeight;
+        CGFloat originY = [UIScreen mainScreen].bounds.size.height-height;
+        CGFloat originX = 0;
+        CGRect  rect =CGRectMake(originX,originY ,width, height);
+        self.tabBar.frame = rect;
+    }
+  
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSInteger selectedIndex = [change[@"new"] integerValue];
     self.JM_TabBar.selectedIndex = selectedIndex;
@@ -43,7 +55,7 @@
 }
 
 - (void)dealloc {
-    JMLog(@"被销毁了");
+    QHLog(@"被销毁了");
     [self removeObserver:self forKeyPath:@"selectedIndex"];
 }
 

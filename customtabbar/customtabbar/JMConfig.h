@@ -5,27 +5,12 @@
 //  Created by JM on 2018/1/2.
 //  Copyright © 2018年 JM. All rights reserved.
 //
-/*
- .----------------. .----------------.
- | .--------------. | .--------------. |
- | |     _____    | | | ____    ____ | |
- | |    |_   _|   | | ||_   \  /   _|| |
- | |      | |     | | |  |   \/   |  | |
- | |   _  | |     | | |  | |\  /| |  | |
- | |  | |_' |     | | | _| |_\/_| |_ | |
- | |  `.___.'     | | ||_____||_____|| |
- | |              | | |              | |
- | '--------------' | '--------------' |
- '----------------' '----------------'
- github: https://github.com/JunAILiang
- blog: https://www.ljmvip.cn
- */
 
 //自定义log
 #ifdef DEBUG
-#define JMLog(...) NSLog(__VA_ARGS__)
+#define QHLog(...) NSLog(__VA_ARGS__)
 #else
-#define JMLog(...)
+#define QHLog(...)
 #endif
 
 //随机颜色+RGB颜色+RBGA颜色+16进制颜色
@@ -80,6 +65,8 @@ typedef void (^JMConfigCustomBtnBlock) (UIButton *btn, NSInteger index);
 /** tabBar */
 /** 是否显示tabBar顶部线条颜色 (默认 YES) */
 @property (nonatomic, assign) BOOL isClearTabBarTopLine;
+/** tabBar的高度 */
+@property (nonatomic, assign) CGFloat tabBarHeight;
 /** tabBar顶部线条颜色 (默认亮灰色) */
 @property (nonatomic, strong) UIColor *tabBarTopLineColor;
 /** tabBar的背景颜色 (默认白色) */
