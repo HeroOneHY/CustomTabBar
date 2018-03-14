@@ -12,13 +12,11 @@
 		EF5730D620590C2800D977A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5730D520590C2800D977A8 /* Assets.xcassets */; };
 		EF5730D920590C2800D977A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5730D720590C2800D977A8 /* LaunchScreen.storyboard */; };
 		EF5730DC20590C2800D977A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730DB20590C2800D977A8 /* main.m */; };
-		EF57310220590E9C00D977A8 /* CAAnimation+JMAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730F320590E9B00D977A8 /* CAAnimation+JMAnimation.m */; };
 		EF57310320590E9C00D977A8 /* UIColor+JM.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730F520590E9B00D977A8 /* UIColor+JM.m */; };
 		EF57310420590E9C00D977A8 /* UIView+JM.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730F720590E9B00D977A8 /* UIView+JM.m */; };
 		EF57310520590E9C00D977A8 /* JMTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730F920590E9B00D977A8 /* JMTabBarButton.m */; };
 		EF57310620590E9C00D977A8 /* JMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730FA20590E9B00D977A8 /* JMTabBarController.m */; };
 		EF57310720590E9C00D977A8 /* JMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5730FE20590E9C00D977A8 /* JMTabBar.m */; };
-		EF57310820590E9C00D977A8 /* JMBadgeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EF57310020590E9C00D977A8 /* JMBadgeValue.m */; };
 		EF57310920590E9C00D977A8 /* JMConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EF57310120590E9C00D977A8 /* JMConfig.m */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +30,10 @@
 		EF5730D820590C2800D977A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5730DA20590C2800D977A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5730DB20590C2800D977A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EF5730F220590E9B00D977A8 /* CAAnimation+JMAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JMAnimation.h"; sourceTree = "<group>"; };
-		EF5730F320590E9B00D977A8 /* CAAnimation+JMAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JMAnimation.m"; sourceTree = "<group>"; };
 		EF5730F420590E9B00D977A8 /* UIColor+JM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JM.h"; sourceTree = "<group>"; };
 		EF5730F520590E9B00D977A8 /* UIColor+JM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JM.m"; sourceTree = "<group>"; };
 		EF5730F620590E9B00D977A8 /* UIView+JM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JM.h"; sourceTree = "<group>"; };
 		EF5730F720590E9B00D977A8 /* UIView+JM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JM.m"; sourceTree = "<group>"; };
-		EF5730F820590E9B00D977A8 /* JMBadgeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBadgeValue.h; sourceTree = "<group>"; };
 		EF5730F920590E9B00D977A8 /* JMTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTabBarButton.m; sourceTree = "<group>"; };
 		EF5730FA20590E9B00D977A8 /* JMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTabBarController.m; sourceTree = "<group>"; };
 		EF5730FB20590E9B00D977A8 /* JMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTabBarController.h; sourceTree = "<group>"; };
@@ -46,7 +41,6 @@
 		EF5730FD20590E9C00D977A8 /* JMTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTabBarButton.h; sourceTree = "<group>"; };
 		EF5730FE20590E9C00D977A8 /* JMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTabBar.m; sourceTree = "<group>"; };
 		EF5730FF20590E9C00D977A8 /* JMConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMConfig.h; sourceTree = "<group>"; };
-		EF57310020590E9C00D977A8 /* JMBadgeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMBadgeValue.m; sourceTree = "<group>"; };
 		EF57310120590E9C00D977A8 /* JMConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +74,6 @@
 		EF5730CB20590C2800D977A8 /* customtabbar */ = {
 			isa = PBXGroup;
 			children = (
-				EF5730F820590E9B00D977A8 /* JMBadgeValue.h */,
-				EF57310020590E9C00D977A8 /* JMBadgeValue.m */,
 				EF5730FF20590E9C00D977A8 /* JMConfig.h */,
 				EF57310120590E9C00D977A8 /* JMConfig.m */,
 				EF5730FC20590E9C00D977A8 /* JMTabBar.h */,
@@ -106,8 +98,6 @@
 		EF5730F120590E9B00D977A8 /* JMUtility */ = {
 			isa = PBXGroup;
 			children = (
-				EF5730F220590E9B00D977A8 /* CAAnimation+JMAnimation.h */,
-				EF5730F320590E9B00D977A8 /* CAAnimation+JMAnimation.m */,
 				EF5730F420590E9B00D977A8 /* UIColor+JM.h */,
 				EF5730F520590E9B00D977A8 /* UIColor+JM.m */,
 				EF5730F620590E9B00D977A8 /* UIView+JM.h */,
@@ -188,11 +178,9 @@
 			files = (
 				EF5730D120590C2800D977A8 /* ViewController.m in Sources */,
 				EF57310420590E9C00D977A8 /* UIView+JM.m in Sources */,
-				EF57310820590E9C00D977A8 /* JMBadgeValue.m in Sources */,
 				EF57310720590E9C00D977A8 /* JMTabBar.m in Sources */,
 				EF5730DC20590C2800D977A8 /* main.m in Sources */,
 				EF57310320590E9C00D977A8 /* UIColor+JM.m in Sources */,
-				EF57310220590E9C00D977A8 /* CAAnimation+JMAnimation.m in Sources */,
 				EF57310520590E9C00D977A8 /* JMTabBarButton.m in Sources */,
 				EF57310620590E9C00D977A8 /* JMTabBarController.m in Sources */,
 				EF57310920590E9C00D977A8 /* JMConfig.m in Sources */,

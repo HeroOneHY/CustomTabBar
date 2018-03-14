@@ -24,7 +24,6 @@
 #import "JMTabBar.h"
 #import "JMTabBarButton.h"
 #import "UIView+JM.h"
-#import "CAAnimation+JMAnimation.h"
 
 @interface JMTabBar()
 
@@ -161,31 +160,7 @@
         if (i == selectedIndex) {
             tbBtn.title.textColor = [[JMConfig config] selTitleColor];
             tbBtn.imageView.image = [UIImage imageNamed:self.selImageArrM[i]];
-            
-            JMConfigTabBarAnimType type = [[JMConfig config] tabBarAnimType];
-            if (type == JMConfigTabBarAnimTypeRotationY) {
-                 [tbBtn.imageView.layer addAnimation:[CAAnimation JM_TabBarRotationY] forKey:@"rotateAnimation"];
-            } else if (type == JMConfigTabBarAnimTypeScale) {
-                
-                CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-                CGPoint point = tbBtn.imageView.frame.origin;
-                point.y -= 15;
-                anim.toValue = [NSNumber numberWithFloat:point.y];
-                
-                CABasicAnimation *anim1 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-                anim1.toValue = [NSNumber numberWithFloat:1.3f];
-                
-                CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
-                groupAnimation.fillMode = kCAFillModeForwards;
-                groupAnimation.removedOnCompletion = NO;
-                groupAnimation.animations = [NSArray arrayWithObjects:anim,anim1, nil];
-                
-                [tbBtn.imageView.layer addAnimation:groupAnimation forKey:@"groupAnimation"];
-            } else if (type == JMConfigTabBarAnimTypeBoundsMin) {
-                [tbBtn.imageView.layer addAnimation:[CAAnimation JM_TabBarBoundsMin] forKey:@"min"];
-            } else if (type == JMConfigTabBarAnimTypeBoundsMax) {
-                [tbBtn.imageView.layer addAnimation:[CAAnimation JM_TabBarBoundsMax] forKey:@"max"];
-            }
+    
         } else {
             tbBtn.title.textColor = [[JMConfig config] norTitleColor];
             tbBtn.imageView.image = [UIImage imageNamed:self.norImageArrM[i]];

@@ -23,7 +23,6 @@
 
 #import <UIKit/UIKit.h>
 #import "JMConfig.h"
-#import "JMBadgeValue.h"
 
 @interface JMTabBarButton : UIView
 
@@ -31,8 +30,6 @@
 @property (nonatomic, strong) UIImageView *imageView;
 /** Title */
 @property (nonatomic, strong) UILabel *title;
-/** badgeValue */
-@property (nonatomic, strong) JMBadgeValue *badgeValue;
 /** type */
 @property (nonatomic, assign) JMConfigTypeLayout typeLayout;
 

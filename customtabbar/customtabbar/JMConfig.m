@@ -61,82 +61,9 @@ static id _instance = nil;
     _tabBarBackground = [UIColor whiteColor];
     _typeLayout = JMConfigTypeLayoutNormal;
     _imageSize = CGSizeMake(28, 28);
-    _badgeTextColor = [UIColor colorWithHexString:@"#FFFFFF"];
-    _badgeBackgroundColor = [UIColor colorWithHexString:@"#FF4040"];
     _titleFont = 12.f;
     _titleOffset = 2.f;
     _imageOffset = 2.f;
-}
-
-- (void)setBadgeSize:(CGSize)badgeSize {
-    _badgeSize = badgeSize;
-    NSMutableArray *arrM = [self getTabBarButtons];
-    for (JMTabBarButton *btn in arrM) {
-        btn.badgeValue.badgeL.size = badgeSize;
-    }
-}
-
-- (void)setBadgeOffset:(CGPoint)badgeOffset {
-    _badgeOffset = badgeOffset;
-    NSMutableArray *arrM = [self getTabBarButtons];
-    for (JMTabBarButton *btn in arrM) {
-        btn.badgeValue.badgeL.x += badgeOffset.x;
-        btn.badgeValue.badgeL.y += badgeOffset.y;
-    }
-}
-
-- (void)setBadgeTextColor:(UIColor *)badgeTextColor {
-    _badgeTextColor = badgeTextColor;
-    NSMutableArray *arrM = [self getTabBarButtons];
-    for (JMTabBarButton *btn in arrM) {
-        btn.badgeValue.badgeL.textColor = badgeTextColor;
-    }
-}
-
-- (void)setBadgeBackgroundColor:(UIColor *)badgeBackgroundColor {
-    _badgeBackgroundColor = badgeBackgroundColor;
-    NSMutableArray *arrM = [self getTabBarButtons];
-    for (JMTabBarButton *btn in arrM) {
-        btn.badgeValue.badgeL.backgroundColor = badgeBackgroundColor;
-    }
-}
-
-- (void)setBadgeRadius:(CGFloat)badgeRadius {
-    _badgeRadius = badgeRadius;
-    NSMutableArray *arrM = [self getTabBarButtons];
-    for (JMTabBarButton *btn in arrM) {
-        btn.badgeValue.badgeL.layer.cornerRadius = badgeRadius;
-    }
-}
-
-- (void)badgeRadius:(CGFloat)radius AtIndex:(NSInteger)index {
-    JMTabBarButton *tabBarButton = [self getTabBarButtonAtIndex:index];
-    tabBarButton.badgeValue.badgeL.layer.cornerRadius = radius;
-}
-
-
-- (void)showPointBadgeAtIndex:(NSInteger)index{
-    JMTabBarButton *tabBarButton = [self getTabBarButtonAtIndex:index];
-    tabBarButton.badgeValue.hidden = NO;
-    tabBarButton.badgeValue.type = JMBadgeValueTypePoint;
-}
-
-- (void)showNewBadgeAtIndex:(NSInteger)index {
-    JMTabBarButton *tabBarButton = [self getTabBarButtonAtIndex:index];
-    tabBarButton.badgeValue.hidden = NO;
-    tabBarButton.badgeValue.badgeL.text = @"new";
-    tabBarButton.badgeValue.type = JMBadgeValueTypeNew;
-}
-
-- (void)showNumberBadgeValue:(NSString *)badgeValue AtIndex:(NSInteger)index {
-    JMTabBarButton *tabBarButton = [self getTabBarButtonAtIndex:index];
-    tabBarButton.badgeValue.hidden = NO;
-    tabBarButton.badgeValue.badgeL.text = badgeValue;
-    tabBarButton.badgeValue.type = JMBadgeValueTypeNumber;
-}
-
-- (void)hideBadgeAtIndex:(NSInteger)index {
-    [self getTabBarButtonAtIndex:index].badgeValue.hidden = YES;
 }
 
 - (void)addCustomBtn:(UIButton *)btn AtIndex:(NSInteger)index BtnClickBlock:(JMConfigCustomBtnBlock)btnClickBlock {    

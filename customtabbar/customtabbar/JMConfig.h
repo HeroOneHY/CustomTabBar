@@ -43,21 +43,6 @@ typedef NS_ENUM(NSInteger, JMConfigTypeLayout) {
     JMConfigTypeLayoutImage,  //只有图片 (图片居中)
 };
 
-typedef NS_ENUM(NSInteger, JMConfigTabBarAnimType) {
-    JMConfigTabBarAnimTypeNormal, //无动画
-    JMConfigTabBarAnimTypeRotationY, //Y轴旋转
-    JMConfigTabBarAnimTypeBoundsMin, //缩小
-    JMConfigTabBarAnimTypeBoundsMax, //放大
-    JMConfigTabBarAnimTypeScale, //缩放动画
-};
-
-/** badgeValue 动画枚举 */
-typedef NS_ENUM(NSInteger, JMConfigBadgeAnimType) {
-    JMConfigBadgeAnimTypeNormal, //无动画
-    JMConfigBadgeAnimTypeShake, //抖动动画
-    JMConfigBadgeAnimTypeOpacity, //透明过渡动画
-    JMConfigBadgeAnimTypeScale, //缩放动画
-};
 
 typedef void (^JMConfigCustomBtnBlock) (UIButton *btn, NSInteger index);
 
@@ -93,7 +78,6 @@ typedef void (^JMConfigCustomBtnBlock) (UIButton *btn, NSInteger index);
 @property (nonatomic, assign) CGFloat imageOffset;
 
 /** tabBar */
-@property (nonatomic, assign) JMConfigTabBarAnimType tabBarAnimType;
 /** 是否显示tabBar顶部线条颜色 (默认 YES) */
 @property (nonatomic, assign) BOOL isClearTabBarTopLine;
 /** tabBar顶部线条颜色 (默认亮灰色) */
@@ -105,57 +89,6 @@ typedef void (^JMConfigCustomBtnBlock) (UIButton *btn, NSInteger index);
 
 /** tabBarController */
 @property (nonatomic, strong) JMTabBarController *tabBarController;
-
-
-
-
-/******************************** badgeValue 基本配置 ********************************/
-
-/** badgeColor(默认 #FFFFFF) */
-@property (nonatomic, strong) UIColor *badgeTextColor;
-/** badgeBackgroundColor (默认 #FF4040)*/
-@property (nonatomic, strong) UIColor *badgeBackgroundColor;
-/** badgeSize (如没有特殊需求, 请勿修改此属性, 此属性只有在控制器加载完成后有效)*/
-@property (nonatomic, assign) CGSize badgeSize;
-/** badgeOffset (如没有特殊需求, 请勿修改此属性, 此属性只有在控制器加载完成后有效) */
-@property (nonatomic, assign) CGPoint badgeOffset;
-/** badge圆角大小 (如没有特殊需求, 请勿修改此属性, 此属性只有在控制器加载完成后有效, 一般配合badgeSize或badgeOffset使用) */
-@property (nonatomic, assign) CGFloat badgeRadius;
-/**
- 对单个进行圆角设置
- @param radius 圆角值
- @param index 下标
- */
-- (void)badgeRadius:(CGFloat)radius AtIndex:(NSInteger)index;
-/** badge动画 (默认无动画) */
-@property (nonatomic, assign) JMConfigBadgeAnimType animType;
-
-/**
- 显示圆点badgevalue  (以下关于badgeValue的操作可以在app全局操作)  使用方法 [[JMConfig config] showPointBadgeValue: AtIndex: ]
- @param index 显示的下标
- */
-- (void)showPointBadgeAtIndex:(NSInteger)index;
-
-/**
- 显示newBadgeValue (以下关于badgeValue的操作可以在app全局操作)
- @param index 下标
- */
-- (void)showNewBadgeAtIndex:(NSInteger)index;
-
-/**
- 显示带数值的下标  (注意: 此方法可以全局重复调用)
- @param badgeValue 数值
- @param index 下标
- */
-- (void)showNumberBadgeValue:(NSString *)badgeValue AtIndex:(NSInteger)index;
-
-/**
- 隐藏下标的badgeValue
-
- @param index 下标
- */
-- (void)hideBadgeAtIndex:(NSInteger)index;
-
 
 
 /******************************** 自定义按钮 基本配置 ********************************/

@@ -41,9 +41,6 @@
         self.title.font = [UIFont systemFontOfSize:[[JMConfig config] titleFont]];
         [self addSubview:self.title];
         
-        self.badgeValue = [[JMBadgeValue alloc] init];
-        self.badgeValue.hidden = YES;
-        [self addSubview:self.badgeValue];
     }
     return self;
 }
@@ -64,11 +61,7 @@
     CGFloat titleY = self.height - titleH - [[JMConfig config] titleOffset];
     self.title.frame = CGRectMake(titleX, titleY, titleW, titleH);
     
-    CGFloat badgeX = CGRectGetMaxX(self.imageView.frame) - 6;
-    CGFloat badgeY = CGRectGetMinY(self.imageView.frame) - 2;
-    CGFloat badgeH = 16;
-    CGFloat badgeW = 24;
-    self.badgeValue.frame = CGRectMake(badgeX, badgeY, badgeW, badgeH);
+
 }
 
 - (void)setTypeLayout:(JMConfigTypeLayout)typeLayout {
